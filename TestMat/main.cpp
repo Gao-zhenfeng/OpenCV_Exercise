@@ -19,6 +19,12 @@ int main(int argc, char** argv)
 	//	imshow("[Video]", frame);
 	//	if (waitKey(100) >= 0) break;	//如果等待期间有键盘输入，将退出循环
 	//}
+	Mat img1;
+	namedWindow("img1", WINDOW_NORMAL);
+	//namedWindow("降采样", WINDOW_NORMAL);
+	img1 = imread("E:\\VS_project\\OpenCV\\TestMat\\1.png");
+	imshow("img1", img1);
+
 	VideoCapture g_cap;
 	namedWindow("Video", WINDOW_NORMAL);
 	g_cap.open("E:\\课程资料\\毕设\\小毕设\\视频\\ORB.mp4");
@@ -51,15 +57,19 @@ int main(int argc, char** argv)
 		if (c == 's')	//single step
 		{
 			bar.g_run = 1;
+			imshow("Video", bar.frame);
 			cout << "Single step, run = " << bar.g_run << endl;
 		}
 		if (c == 'r')	//run step
 		{
 			bar.g_run = -1;//when g_run is a negative number, it's in run mode.
+			imshow("Video", bar.frame);
 			cout << "Run mode, run = " << bar.g_run << endl;
 		}
 		if (c == 27)
 			break;
 	}
+	//Mat src = imread("1.png");
+	//Gaussian_Blur(src);
 	return 0;
 }

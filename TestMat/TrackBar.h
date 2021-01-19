@@ -17,3 +17,4 @@ public:
 };
 
 void onTrackbarSlide(int pos, void* bar);
+void Gaussian_Blur(const Mat& image);

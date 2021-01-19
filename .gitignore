@@ -5,3 +5,10 @@
 /.vs
 /TestMat/x64/Debug
 /x64/Debug
+/Example_1/x64
+/Example_2/x64/Debug
+/Example_1/OpenCV_X64_Debug.props
+/Example_1/OpenCV_X64_Release.props
+/Example_3/x64/Debug
+/Example_3/OpenCV_X64_Debug.props
+/x64/Release
